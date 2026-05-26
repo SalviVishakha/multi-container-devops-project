@@ -21,8 +21,9 @@ jobs:
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
 
-          script: |
-            cd multi-container-devops-project
-            git pull origin main
-            docker-compose down
-            docker-compose up --build -d
+         script: |
+export DOCKER_BUILDKIT=0
+cd multi-container-devops-project
+git pull origin main
+docker-compose down
+docker-compose up --build -d
