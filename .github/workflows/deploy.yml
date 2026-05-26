@@ -14,7 +14,7 @@ steps:
   - name: Checkout Code
     uses: actions/checkout@v4
 
-  - name: SSH into EC2 and Deploy
+  - name: Deploy on EC2
     uses: appleboy/ssh-action@v1.0.3
     with:
       host: ${{ secrets.EC2_HOST }}
