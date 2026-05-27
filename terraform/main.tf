@@ -88,7 +88,7 @@ resource "aws_security_group" "devops_sg" {
 }
 
 resource "aws_instance" "devops_server" {
-  ami                    = "ami-0b5a4e51202cd98e5"
+  ami                    = "ami-00263659a97a6c29c"
   instance_type          = "t3.micro"
   key_name               = "project-key"
 
